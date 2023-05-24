@@ -1,5 +1,5 @@
-#countLabel{
+label {
 	display: block;
-	text-align: center;
+	text-align: left;
 	font-size: 50px;
 }
