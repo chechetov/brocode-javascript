@@ -1,23 +1,13 @@
-// 43
-// sort an array of numbers
+// function expression = function without a name (anonymous function)
 
-let grades = [100, 50, 90, 60, 80, 70];
+let count = 0;
 
-grades = grades.sort(descendingSort);
-grades.forEach(print);
-
-grades = grades.sort(ascendingSort);
-grades.forEach(print);
-
-
-function descendingSort(x, y){
-	return y - x;
+document.getElementById("increaseButton").onclick = function(){
+	count+=1;
+	document.getElementById("myLabel").innerHTML = count;
 }
 
-function ascendingSort(x, y){
-	return x - y;
-}
-
-function print(element){
-	console.log(element);
+document.getElementById("decreaseButton").onclick = function(){
+	count-=1;
+	document.getElementById("myLabel").innerHTML = count;
 }
