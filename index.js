@@ -1,13 +1,24 @@
-// 39
-// array.forEach() = execures a provided callback function
+// 40
+// array.map() = executes a provided callback function 
 // once for each array element
+// AND creates a new array
 
-let students = ["spongebob", "patrick", "squidward"];
-students.forEach(capitalize);
+let numbers = [1, 2, 3, 4, 5];
+let squares = numbers.map(square);
+let cubes = numbers.map(cube);
 
 
-function capitalize(element, index, array){
-	array[index] = element[0].toUpperCase() + element.substring(1);
+squares.forEach(print);
+cubes.forEach(print);
+
+function square(element){
+	return Math.pow(element,2);
 }
 
-console.log(...students);
+function cube(element){
+	return Math.pow(element, 3);
+}
+
+function print(element){
+	console.log(element);
+}
