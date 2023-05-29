@@ -1,13 +1,30 @@
-// function expression = function without a name (anonymous function)
+// 45 arrow function expression
+// compact alternative to a traditional function expresssion
 
-let count = 0;
+// One expression
+const greeting = (userName) => console.log(`Hello ${userName}`);
+const percent = (x,y) => x/y * 100;
 
-document.getElementById("increaseButton").onclick = function(){
-	count+=1;
-	document.getElementById("myLabel").innerHTML = count;
+// More than one
+const doubleGreeting = (userName, anotherUserName) => {
+	console.log(`Hello ${userName} and also ${anotherUserName}`);
+	console.log(`Hello ${userName}`);
 }
 
-document.getElementById("decreaseButton").onclick = function(){
-	count-=1;
-	document.getElementById("myLabel").innerHTML = count;
+greeting("Bro");
+doubleGreeting("Bro","Denys");
+console.log(`${percent(35,50)}%`);
+
+let grades = [100, 50, 90, 60, 80, 70];
+
+grades.sort(descending);
+grades.forEach(print);
+
+function descending(x, y){
+	return y - x;
 }
+
+function print(element){
+	console.log(element);
+}
+
