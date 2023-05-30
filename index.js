@@ -13,18 +13,10 @@ const doubleGreeting = (userName, anotherUserName) => {
 
 greeting("Bro");
 doubleGreeting("Bro","Denys");
+
 console.log(`${percent(35,50)}%`);
 
 let grades = [100, 50, 90, 60, 80, 70];
 
-grades.sort(descending);
-grades.forEach(print);
-
-function descending(x, y){
-	return y - x;
-}
-
-function print(element){
-	console.log(element);
-}
-
+grades.sort( (x,y) => y -x ) ;
+grades.forEach( (element) => console.log(element) );
