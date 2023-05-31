@@ -1,22 +1,25 @@
-// 45 arrow function expression
-// compact alternative to a traditional function expresssion
+// 46: shuffle array
 
-// One expression
-const greeting = (userName) => console.log(`Hello ${userName}`);
-const percent = (x,y) => x/y * 100;
+let cards = ["A", "2","3","4","5","6","7","8","9","10","J","K","Q"];
 
-// More than one
-const doubleGreeting = (userName, anotherUserName) => {
-	console.log(`Hello ${userName} and also ${anotherUserName}`);
-	console.log(`Hello ${userName}`);
+shuffle(cards);
+
+function shuffle(array){
+
+	let currentIndex = array.length;
+
+	while (currentIndex != 0){
+		let randomIndex = Math.floor(Math.random() * array.length);
+		currentIndex -=1;
+
+		let temp = array[randomIndex];
+		array[randomIndex] = array[currentIndex];
+		array[currentIndex] = temp;
+	}
 }
 
-greeting("Bro");
-doubleGreeting("Bro","Denys");
+const print = (thing) => {
+	console.log(thing);
+}
 
-console.log(`${percent(35,50)}%`);
-
-let grades = [100, 50, 90, 60, 80, 70];
-
-grades.sort( (x,y) => y -x ) ;
-grades.forEach( (element) => console.log(element) );
+print(cards);
